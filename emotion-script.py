@@ -23,11 +23,6 @@ def float_format(num):
     return '%.6f' % num
 
 
-def my_round(num, d=0):
-    p = 10 ** d
-    return float(math.floor((num * p) + math.copysign(0.5, num))) / p
-
-
 if __name__ == '__main__':
 
     with open('api_key.txt', 'r') as f:
@@ -50,7 +45,7 @@ if __name__ == '__main__':
         face_fear = float_format(face_scores['fear'])
         face_neutral = float_format(face_scores['neutral'])
         face_anger = float_format(face_scores['anger'])
-        face_happiness = float_format(my_round(face_scores['happiness'], 6))
+        face_happiness = float_format(face_scores['happiness'])
         face_sadness = float_format(face_scores['sadness'])
         print('Surprise: ', face_surprise)
         print('Contempt: ', face_contempt)

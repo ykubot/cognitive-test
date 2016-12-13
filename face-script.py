@@ -20,15 +20,6 @@ def get_faceinfo(file_path, param, header):
         print(e.message)
 
 
-def float_format(num):
-    return '%.6f' % num
-
-
-def my_round(num, d=0):
-    p = 10 ** d
-    return float(math.floor((num * p) + math.copysign(0.5, num))) / p
-
-
 if __name__ == '__main__':
 
     with open('api_key_face.txt', 'r') as f:
